@@ -34,8 +34,8 @@
 
     };
 
-    ToBuyController.$inject = ['$scope', 'ShoppingListCheckOffService'];
-    function ToBuyController($scope, ShoppingListCheckOffService) {
+    ToBuyController.$inject = ['ShoppingListCheckOffService'];
+    function ToBuyController(ShoppingListCheckOffService) {
         var vm = this;
         vm.toBuyList = ShoppingListCheckOffService.getToBuyList();
 
@@ -44,8 +44,8 @@
         }
     };
 
-    AlreadyBoughtController.$inject = ['$scope', 'ShoppingListCheckOffService'];
-    function AlreadyBoughtController($scope, ShoppingListCheckOffService) {
+    AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
+    function AlreadyBoughtController(ShoppingListCheckOffService) {
         var vm = this;
         vm.boughtList = ShoppingListCheckOffService.getBoughtList();       
     };
